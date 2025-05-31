@@ -45,7 +45,7 @@ def forecast(df,lenght):
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
     page_title='BTC Prediction',
-    layout="wide"
+    # layout="wide"
 )
 
 st.title("📈 Bitcoin Price Forecast using Holt-Winters")
