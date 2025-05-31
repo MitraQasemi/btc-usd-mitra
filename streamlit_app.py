@@ -81,13 +81,13 @@ if st.button("Run Forecast"):
         forecast.plot(label="Forecast", ax=ax)
         plt.legend()
         st.pyplot(fig)
-        df_combined = pd.DataFrame({Add commentMore actions
+        df_combined = pd.DataFrame({
             'train': btc_data.Close,
             'prediction': forecast
         })
 
         # Streamlit chart
         st.line_chart(df_combined)
-        
+
     except Exception as e:
         st.error(f"❌ Forecasting failed: {e}")
