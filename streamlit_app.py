@@ -87,7 +87,7 @@ if st.button("Run Forecast"):
         })
 
         # Streamlit chart
-        st.line_chart(df_combined)
+        st.line_chart(df_combined,use_container_width=False)
 
     except Exception as e:
         st.error(f"❌ Forecasting failed: {e}")
