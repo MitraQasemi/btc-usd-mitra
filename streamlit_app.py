@@ -82,7 +82,7 @@ if st.button("Run Forecast"):
         plt.legend()
         st.pyplot(fig)
         df_combined = pd.DataFrame({
-            'train': btc_data.Close,
+            'train': btc_data.Close[-30:],
             'prediction': forecast
         })
 
