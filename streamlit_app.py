@@ -50,7 +50,7 @@ st.set_page_config(
 
 st.title("📈 Bitcoin Price Forecast using Holt-Winters")
 
-start_date = st.date_input("Start Date", pd.to_datetime("2014-01-01"))
+start_date = st.date_input("Start Date", pd.to_datetime("2024-01-01"))
 end_date = st.date_input("End Date")
 
 if start_date >= end_date:
