@@ -34,7 +34,7 @@ def forecast(df,lenght):
     train,test = df.iloc[:portion,3],df.iloc[-lenght:,3]
     len(train),len(test)
 
-    model_exponential_tripple = ExponentialSmoothing(train,trend = 'add', seasonal = 'add', seasonal_periods = 12).fit(
+    model_exponential_tripple = ExponentialSmoothing(df.Close,trend = 'add', seasonal = 'add', seasonal_periods = 12).fit(
         optimized=True, smoothing_level=0.2, smoothing_trend=0.04, smoothing_seasonal=0.85)
     pred_exponential_tripple = model_exponential_tripple.forecast(len(test))
     return pred_exponential_tripple
